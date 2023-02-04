@@ -33,13 +33,13 @@ public class BattleSystem : MonoBehaviour
     IEnumerator SetUpBattle()
     {
         //to spawn the units on top of said locations of the map
-        GameObject playerGo = Instantiate(playerPrefab, playerBattleStation); //this would spawn the units in their corresponded areas 
+        //Comment out  GameObject playerGo = Instantiate(playerPrefab, playerBattleStation); //this would spawn the units in their corresponded areas 
         //it also gets a reference to what we are spawning
-        playerUnit = playerGo.GetComponent<UnitStats>(); //refrencing the Unit whenever we info that is store there
+       // playerUnit = playerGo.GetComponent<UnitStats>(); //refrencing the Unit whenever we info that is store there
         
         //allows us to get information about our units
-        GameObject enemyGo = Instantiate(enemyPrefab, enemyBattleStation);
-        enemyUnit = enemyGo.GetComponent<UnitStats>();
+       // GameObject enemyGo = Instantiate(enemyPrefab, enemyBattleStation); comment out
+        //enemyUnit = enemyGo.GetComponent<UnitStats>();
 
         playerHUD.SetHUD(playerUnit); //so that the stats of the charactes can be shown
         enemyHUD.SetHUD(enemyUnit);
