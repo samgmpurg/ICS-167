@@ -21,10 +21,5 @@ public class SOUnitDefinition : ScriptableObject
     [SerializeField]
     private UnitTypes type;
     
-    public UnitDefinition Spawn(Player owner, Vector2 position){ //Need to implement a Player script
-        UnitDefinition instance = GameObject.Instantiate(prefab,position,Quaternion.identity);
-        instance.Initalize(UnitName,type,owner);
-        return instance;
-    }
     
 }

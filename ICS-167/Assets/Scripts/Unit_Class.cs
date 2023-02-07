@@ -6,6 +6,7 @@ public abstract class UnitInstance : MonoBehaviour
 {
     [SerializeField]
     private NavMeshAgent agent;
+    public int PlayerNum = 1;
     public void Initalize(string name, SOUnitDefinition.UnitTypes type,Player owner){
         UnitName = name;
         Type = type;
