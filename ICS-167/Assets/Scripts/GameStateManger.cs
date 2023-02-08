@@ -20,15 +20,15 @@ public class GameStateManger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spot1 = new Vector3(0.0f,0.0f,1.0f);
-        spot2 = new Vector3(1.0f,1.0f,1.0f);
+        spot1 = new Vector3(0.0f,0.0f,1.0f); //Each x and y value corosponses to a grid spot on the map
+        spot2 = new Vector3(1.0f,1.0f,1.0f); //Can be potentially spawned out of the map if we're not careful
         spot3 = new Vector3(5.0f,1.0f,1.0f);
         spot4 = new Vector3(5.0f,2.0f,1.0f);
         spot5 = new Vector3(7.0f,6.0f,1.0f);
         if(_instance == null){
-            _instance = this;
+            _instance = this; //standard GameStateManger stuff
         }
-        else{
+        else{ 
             Destroy(object1);
             Destroy(object2);
             Destroy(object3);
