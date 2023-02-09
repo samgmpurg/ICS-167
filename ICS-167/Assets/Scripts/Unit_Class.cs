@@ -86,7 +86,8 @@ public abstract class UnitInstance : MonoBehaviour
         originalPos = transform.position;
         targetPos = originalPos + direction;
 
-        while(elapsedTime < timeToMove)
+        //makes sure we lerp from the original position to the target pos, in the exact time we move
+        while (elapsedTime < timeToMove)
         {
             transform.position = Vector3.Lerp(originalPos, targetPos, (elapsedTime / timeToMove)); 
             elapsedTime += Time.deltaTime;

@@ -15,6 +15,7 @@ public class Grid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //G is a toggle key to enable/disable the grid from the screen.
         if (Input.GetKeyDown(KeyCode.G))
         {
             sr.enabled = !sr.enabled;
