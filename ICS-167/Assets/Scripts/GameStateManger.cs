@@ -15,6 +15,7 @@ public class GameStateManger : MonoBehaviour
     private Vector3 spot3;
     private Vector3 spot4;
     private Vector3 spot5;
+    private Vector3 spot6;
 
     private static GameStateManger _instance;
     // Start is called before the first frame update
@@ -25,18 +26,20 @@ public class GameStateManger : MonoBehaviour
         spot3 = new Vector3(5.0f,1.0f,1.0f);
         spot4 = new Vector3(5.0f,2.0f,1.0f);
         spot5 = new Vector3(7.0f,6.0f,1.0f);
+        spot6 = new Vector3(6.0f,10.0f,1.0f);
         if(_instance == null){
             _instance = this; //standard GameStateManger stuff
         }
         else{ 
             Destroy(object1);
-            Destroy(object2);
+            Destroy(object2); //destroys after the game in unloaded
             Destroy(object3);
             Destroy(object4);
             Destroy(object5);
+            Destroy(object6);
         }//This is a very bad way to initialize stuff and WILL be changed in the fututre
         DontDestroyOnLoad(object1);
-        Instantiate(object1,spot1, Quaternion.identity);
+        Instantiate(object1,spot1, Quaternion.identity); //Spawns everything in
         DontDestroyOnLoad(object2);
         Instantiate(object2,spot2, Quaternion.identity);
         DontDestroyOnLoad(object3);
@@ -45,6 +48,8 @@ public class GameStateManger : MonoBehaviour
         Instantiate(object4,spot4, Quaternion.identity);
         DontDestroyOnLoad(object5);
         Instantiate(object5,spot5, Quaternion.identity);
+        DontDestroyOnLoad(object6);
+        Instantiate(object6,spot6, Quaternion.identity);
     }
 
     // Update is called once per frame
