@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6f31f4d6f91db4894d9c9d9ae50ed1, type: 3}
   m_Name: Enemy
   m_EditorClassIdentifier: 
-  UnitName: 
-  UnitIcon: {fileID: 0}
+  UnitIcon: {fileID: 21300000, guid: 20c732a242a20ce46859f54b3644e9f7, type: 3}
   prefab: {fileID: 0}
   type: 0
+  defaulthealth: 5
+  defaultspeed: 2
+  defaultdamage: 1

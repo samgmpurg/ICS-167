@@ -1611,7 +1611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab26122e64e64e40841c8d9f3355d71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothSpeed: 0.125
+  smoothSpeed: 0.01
   defaultSprite: {fileID: 21300000, guid: 2655108ecbc57f543826d534cec4cba0, type: 3}
   selectedSprite: {fileID: 21300000, guid: 86ce36c0b04fe584d919a7466aeaaaa0, type: 3}
   sr: {fileID: 620985555}
