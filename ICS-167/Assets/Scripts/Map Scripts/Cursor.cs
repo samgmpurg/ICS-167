@@ -9,7 +9,7 @@ public class Cursor : MonoBehaviour
     private Vector3 appliedPosition;
     private Vector3 velocity = Vector3.zero;
     [SerializeField]
-    public float smoothSpeed = 0.125f;
+    public float smoothSpeed = 0.01f;
     public Sprite defaultSprite;
     public Sprite selectedSprite;
     public SpriteRenderer sr;
@@ -50,7 +50,7 @@ public class Cursor : MonoBehaviour
         //Real mouse position in the screen world.
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         //Applied position variable used to store the coordinates. Round down to nearest whole number.
-        appliedPosition = new Vector3((float)Math.Floor(mousePos.x), (float)Math.Floor(mousePos.y));
+        appliedPosition = new Vector3((int)Math.Floor(mousePos.x), (int)Math.Floor(mousePos.y));
 
         //As long as the mouse is not clicked, the cursor will follow the current mouse position.
         if (canMove)
