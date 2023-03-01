@@ -18,7 +18,8 @@ public class GameStateManger : MonoBehaviour
     [SerializeField] private Slider enemyHealth = null;
     [SerializeField] private Button attackBtn = null;
     [SerializeField] private Button healBtn = null;
-
+    public GameObject object7;
+    private Vector2 spot7;
     private int playerHP, enemyHP = 100;
 
     private bool isPlayersTurn = true;
@@ -36,6 +37,7 @@ public class GameStateManger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        spot7 = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         spot1 = new Vector3(0.0f, 0.0f, 1.0f); //Each x and y value corosponses to a grid spot on the map
         spot2 = new Vector3(1.0f, 1.0f, 1.0f); //Can be potentially spawned out of the map if we're not careful
         spot3 = new Vector3(5.0f, 1.0f, 1.0f);
@@ -54,6 +56,7 @@ public class GameStateManger : MonoBehaviour
             Destroy(object4);
             Destroy(object5);
             Destroy(object6);
+            Destroy(object7);
         }//This is a very bad way to initialize stuff and WILL be changed in the fututre
         DontDestroyOnLoad(object1);
         Instantiate(object1, spot1, Quaternion.identity); //Spawns everything in
@@ -67,6 +70,8 @@ public class GameStateManger : MonoBehaviour
         Instantiate(object5, spot5, Quaternion.identity);
         DontDestroyOnLoad(object6);
         Instantiate(object6, spot6, Quaternion.identity);
+        DontDestroyOnLoad(object7);
+        Instantiate(object7,spot7, Quaternion.identity);
     }
 
     //want to know who we want to attack and how much dmg they will take

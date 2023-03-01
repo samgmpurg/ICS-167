@@ -80,5 +80,13 @@ public class Cursor : MonoBehaviour
 
 
     }
+    public float getX()
+    {
+        return transform.position.x;
+    }
+    public float getY()
+    {
+        return transform.position.x;
+    }
 }
 

@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: Arrow
   m_EditorClassIdentifier: 
   UnitIcon: {fileID: 21300000, guid: 48a678810ede0b442aef24515a4821be, type: 3}
+  UnitSprite: {fileID: 2745790051826636274, guid: 5cc3069af958a3e43837027e392a79d0, type: 3}
   prefab: {fileID: 6749333893744571737, guid: 5cc3069af958a3e43837027e392a79d0, type: 3}
   type: 3
   defaulthealth: 5
   defaultspeed: 2
   defaultdamage: 1
+  Cursorx: 1
+  Cursory: 1

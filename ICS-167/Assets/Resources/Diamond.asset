@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: Diamond
   m_EditorClassIdentifier: 
   UnitIcon: {fileID: 21300000, guid: 46c9a9dd5a57f194dbdd4a2e286bc383, type: 3}
+  UnitSprite: {fileID: 861433436484837926, guid: bae61ffd979693a439fcc4ff8002258b, type: 3}
   prefab: {fileID: 2417754744419208223, guid: bae61ffd979693a439fcc4ff8002258b, type: 3}
   type: 1
   defaulthealth: 5
   defaultspeed: 2
   defaultdamage: 1
+  Cursorx: 1
+  Cursory: 1

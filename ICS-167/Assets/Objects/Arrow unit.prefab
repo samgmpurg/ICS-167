@@ -100,4 +100,8 @@ MonoBehaviour:
   originalPos: {x: 0, y: 0, z: 0}
   Cursorclicked: 0
   possiblemovement: 2
-  cursortest: {fileID: 0}
+  unitmousePos: {x: 0, y: 0, z: 0}
+  unitappliedPosition: {x: 0, y: 0, z: 0}
+  SOunit: {fileID: 11400000, guid: 80e52f00a75361b42b3c94c4c369653f, type: 2}
+  posa: {x: 0, y: 0, z: 0}
+  cursorOnObj: 0

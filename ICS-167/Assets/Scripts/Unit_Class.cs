@@ -17,8 +17,12 @@ public abstract class UnitInstance : MonoBehaviour
     private float timeToMove = 0.7f;
     public bool Cursorclicked = false;
     public int possiblemovement=2;
-
-    public Cursor cursortest;
+    public int timesmoved = 0;
+    public Vector3 unitmousePos;
+    public Vector3 unitappliedPosition;
+    public SOUnitDefinition SOunit;
+    public bool unmoveable;
+    public SpriteRenderer sprite;
     //void Update()
     //{
 
@@ -62,24 +66,34 @@ public abstract class UnitInstance : MonoBehaviour
 
         //transform.position = move;
         originalPos = transform.position;
+        if(timesmoved==possiblemovement){
+            unmoveable=true;
+            graycharacter();
+        }
         if(Input.GetKey(KeyCode.W) && !isMoving && originalPos.y!=13)
         {
+            timesmoved+=1;
             StartCoroutine(MovePlayer(Vector3.up));    
         }
         if (Input.GetKey(KeyCode.A) && !isMoving && originalPos.x!=0)
         {
+            timesmoved+=1;
             StartCoroutine(MovePlayer(Vector3.left));
         }
         if (Input.GetKey(KeyCode.S) && !isMoving && originalPos.y!=0)
         {
+            timesmoved+=1;
             StartCoroutine(MovePlayer(Vector3.down));
         }
         if (Input.GetKey(KeyCode.D) && !isMoving && originalPos.x!=13)
         {
+            timesmoved+=1;
             StartCoroutine(MovePlayer(Vector3.right));
         }
     }
+    private void graycharacter(){
 
+    }
     private IEnumerator MovePlayer(Vector3 direction)
     {
         isMoving = true;

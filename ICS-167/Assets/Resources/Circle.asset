@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: Circle
   m_EditorClassIdentifier: 
   UnitIcon: {fileID: 21300000, guid: 7b4a8f7c0c1bfb0439b5a2827c900321, type: 3}
+  UnitSprite: {fileID: 7039425180759269056, guid: ced343df3843fff4baabd78b798682c7, type: 3}
   prefab: {fileID: 1138430849322628847, guid: ced343df3843fff4baabd78b798682c7, type: 3}
   type: 0
   defaulthealth: 5
   defaultspeed: 2
   defaultdamage: 1
+  Cursorx: 1
+  Cursory: 1
