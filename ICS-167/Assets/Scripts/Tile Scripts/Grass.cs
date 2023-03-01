@@ -12,7 +12,7 @@ public class Grass : Tile
         this.xRightPos = xPos2;
         this.yTopPos = yPos2;
         occupied = false;
-
+        property = "Grass";
     }
     // Start is called before the first frame update
     void Start()

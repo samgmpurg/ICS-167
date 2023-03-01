@@ -12,6 +12,8 @@ public class Hill : Tile
         this.xRightPos = xPos2;
         this.yTopPos = yPos2;
         occupied = false;
+        property = "Hill";
+
 
     }
     // Start is called before the first frame update

@@ -12,6 +12,7 @@ public class RockyRoad : Tile
         this.xRightPos = xPos2;
         this.yTopPos = yPos2;
         occupied = false;
+        property = "Rocks";
 
     }
 

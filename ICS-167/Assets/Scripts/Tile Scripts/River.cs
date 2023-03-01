@@ -12,6 +12,7 @@ public class River : Tile
         this.xRightPos = xPos2;
         this.yTopPos = yPos2;
         occupied = false;
+        property = "River";
 
     }
     // Start is called before the first frame update

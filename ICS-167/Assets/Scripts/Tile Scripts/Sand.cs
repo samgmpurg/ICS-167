@@ -13,6 +13,7 @@ public class Sand : Tile
         this.xRightPos = xPos2;
         this.yTopPos = yPos2;
         occupied = false;
+        property = "Sand";
 
     }
 
