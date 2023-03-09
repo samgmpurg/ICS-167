@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3157073608545193148}
   - component: {fileID: 2268144277192713969}
   - component: {fileID: 1111750174353339192}
+  - component: {fileID: -4554676183287831917}
   m_Layer: 0
   m_Name: Elf
   m_TagString: Untagged
@@ -99,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originalPos: {x: 0, y: 0, z: 0}
   Cursorclicked: 0
-  possiblemovement: 2
+  possiblemovement: 4
   timesmoved: 0
   unitmousePos: {x: 0, y: 0, z: 0}
   unitappliedPosition: {x: 0, y: 0, z: 0}
@@ -108,3 +109,15 @@ MonoBehaviour:
   sprite: {fileID: 0}
   posa: {x: 0, y: 0, z: 0}
   cursorOnObj: 0
+--- !u!114 &-4554676183287831917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6846303839954130033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4038335f0809e744ba0dfc10d948f2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

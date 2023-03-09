@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originalPos: {x: 0, y: 0, z: 0}
   Cursorclicked: 0
-  possiblemovement: 2
+  possiblemovement: 3
   timesmoved: 0
   unitmousePos: {x: 0, y: 0, z: 0}
   unitappliedPosition: {x: 0, y: 0, z: 0}
