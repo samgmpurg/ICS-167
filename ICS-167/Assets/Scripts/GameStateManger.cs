@@ -5,6 +5,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
+
+/*public enum State  //work in progress with the states
+{
+    Start, PlayerTurn, EnemyTurn, Won, Lost
+}*/
+
 public class GameStateManger : MonoBehaviour
 {
     private Player pl1Team;
@@ -23,7 +29,6 @@ public class GameStateManger : MonoBehaviour
     public GameObject enemy3;
     public GameObject enemy4;
     public GameObject enemy5;
-    
     [SerializeField] private GameObject player = null;
     [SerializeField] private GameObject enemy = null;
     [SerializeField] private Slider playerHealth = null;
@@ -31,12 +36,12 @@ public class GameStateManger : MonoBehaviour
     [SerializeField] private Button attackBtn = null;
     [SerializeField] private Button healBtn = null;
     
-    public GameObject cursor; //cursor
-    
-    private int playerHP, enemyHP = 100;
+    public int playerHP = 100;
+    public int enemyHP = 100;
 
-    private bool isPlayersTurn = true;
+    //private bool isPlayersTurn = true;
 
+    //private EnemyHpManager enemyHP;
 
     private Vector2 cursorPos; //spot for cursor
     private Vector3 spot1;
@@ -53,8 +58,14 @@ public class GameStateManger : MonoBehaviour
 
     private static GameStateManger _instance;
     // Start is called before the first frame update
+
+    //private State state;
+
+    //public State state;
+   
     void Start()
     {
+
         InitalizeStage();
     }
 
@@ -97,7 +108,6 @@ public class GameStateManger : MonoBehaviour
         spot9 = new Vector3(5.0f, 18.0f, 1.0f);
         spot10 = new Vector3(4.0f, 18.0f, 1.0f);
         
-
         if (_instance == null)
         {
             _instance = this; //standard GameStateManger stuff
@@ -166,95 +176,66 @@ public class GameStateManger : MonoBehaviour
         ChangeTurn(); //changes turn after attack
     }
 
-    private void Heal(GameObject target, float amount)
+    /*private void Update()
     {
-        if (target == enemy)
+        if(state == State.WaitingForPlayer)
         {
-            enemyHealth.value += amount;
-        }
-        else
-        {
-            playerHealth.value += amount; //now the player can heal
-        }
-
-        ChangeTurn(); //changes turn after heal
-    }
-
-    public void buttonAttack()
-    {
-        Attack(enemy, 10); //dmg to enemy
-        
-    }
-
-    public void buttonHeal()
-    {
-        Heal(player, 5);  //healing
-    }
-
-    private void ChangeTurn()
-    {
-        isPlayersTurn = !isPlayersTurn;
-
-        if (!isPlayersTurn)
-        {
-            attackBtn.interactable = false;
-            healBtn.interactable = false;
-
-            StartCoroutine(EnemyTurn());
-        }
-        else //players turn
-        {
-            attackBtn.interactable = true;
-            healBtn.interactable = true;
-        }
-    }
-
-    private IEnumerator EnemyTurn()
-    {
-        yield return new WaitForSeconds(6);  //once is the enemy's turn the player waits three seconds
-
-        int random = 0;
-        random = UnityEngine.Random.Range(1, 3);
-        if (random == 1)
-        {
-            Attack(player, 12); //player attacks for 12 dmg
-        }
-        else
-        {
-            Heal(enemy, 3);
-        }
-    }
-
-
-    public void victory()
-    {
-        if (enemyHP <= 0)
-        {
-            Destroy(enemy);
-        }
-        else
-        {
-            if(enemyHP != 0)
+              
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                ChangeTurn();
+                state = State.Busy;
+                //knows the player is attacking
+               
+                //after the player is done with their turn return to wait
+                 
             }
         }
+}
+
+/*public void Attack()
+{
+
+}
+
+public void Damage()
+{
+
+} */
+
+public bool isDead()
+    {
+        if(playerHP == 0)
+        {
+            Destroy(this.gameObject);
+        }
+
+        if(enemyHP == 0)
+        {
+            Destroy(this.gameObject);
+        }
+
+        return false;
     }
 
-    public void lose()
+    public bool BattleOver()
     {
-        if(playerHP <= 0)
+        if (isDead())
         {
-            Destroy(player);
+            //player is dead, enemy wins
+            return true;
         }
-        else
+
+        if (isDead())
         {
-            if(playerHP != 0)
-            {
-                ChangeTurn();
-            }
+            //enemy is dead, player wins
+            return true;
         }
+
+        return false;   
     }
+
+
+   
 
 
 }
