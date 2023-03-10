@@ -111,9 +111,9 @@ public class GameStateManger : MonoBehaviour
     }
 
 
-    private void Update()
+    /*private void Update()
     {
-        /*if(state == State.WaitingForPlayer)
+        if(state == State.WaitingForPlayer)
         {
               
             if (Input.GetKeyDown(KeyCode.Escape))
@@ -124,20 +124,20 @@ public class GameStateManger : MonoBehaviour
                 //after the player is done with their turn return to wait
                  
             }
-        }*/
-    }  
+        }
+}
 
-    public void Attack()
-    {
+/*public void Attack()
+{
 
-    }
+}
 
-    public void Damage()
-    {
+public void Damage()
+{
 
-    }
+} */
 
-    public bool isDead()
+public bool isDead()
     {
         if(playerHP == 0)
         {
