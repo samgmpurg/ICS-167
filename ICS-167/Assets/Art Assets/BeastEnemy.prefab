@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1291598078041903229}
   m_Layer: 0
   m_Name: BeastEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,6 +124,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f536c895dda08764c9472056c5b7a4cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mov: 3
-  atkRange: 1
-  redSquare: {fileID: 0}

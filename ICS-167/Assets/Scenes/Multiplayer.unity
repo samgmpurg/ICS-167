@@ -1369,7 +1369,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 746238566}
-  - component: {fileID: 746238565}
+  - component: {fileID: 746238567}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1377,46 +1377,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &746238565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 746238564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82f0e281d5456f746b74992285c900f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  units:
-  - {fileID: 9021478225458737776, guid: 53d021c9bdc095b45a57656f26e3e5b6, type: 3}
-  - {fileID: 6846303839954130033, guid: 8be6bc59c27b4744ca99895302d13e17, type: 3}
-  - {fileID: 3845003491151555074, guid: b6f73436b20843a4f91838909ee4618f, type: 3}
-  - {fileID: 5070728416221771793, guid: 93d3f3a29f609b84bab156d03bb2b8b2, type: 3}
-  - {fileID: 5915696679057376893, guid: 387648c3ae0f7d84e8f1a44aeb2801ff, type: 3}
-  - {fileID: 8967632994862512123, guid: 81564b6a7d69e074484ed29bc8692cda, type: 3}
-  - {fileID: 4412805437377851607, guid: a5800ad3759dce547ba3c448ea8e3624, type: 3}
-  - {fileID: 3817009364968435626, guid: a671332f82d77144b884041117a6f0b5, type: 3}
-  - {fileID: 8576120826954363348, guid: 65c9f87612e81584fa555fff77dcad49, type: 3}
-  - {fileID: 6372380414257661357, guid: 144763e48065ad94fa5ae48e209d1db9, type: 3}
-  object1: {fileID: 9021478225458737776, guid: 53d021c9bdc095b45a57656f26e3e5b6, type: 3}
-  object2: {fileID: 6846303839954130033, guid: 8be6bc59c27b4744ca99895302d13e17, type: 3}
-  object3: {fileID: 3845003491151555074, guid: b6f73436b20843a4f91838909ee4618f, type: 3}
-  object4: {fileID: 5070728416221771793, guid: 93d3f3a29f609b84bab156d03bb2b8b2, type: 3}
-  object5: {fileID: 5915696679057376893, guid: 387648c3ae0f7d84e8f1a44aeb2801ff, type: 3}
-  enemy1: {fileID: 8967632994862512123, guid: 81564b6a7d69e074484ed29bc8692cda, type: 3}
-  enemy2: {fileID: 4412805437377851607, guid: a5800ad3759dce547ba3c448ea8e3624, type: 3}
-  enemy3: {fileID: 3817009364968435626, guid: a671332f82d77144b884041117a6f0b5, type: 3}
-  enemy4: {fileID: 8576120826954363348, guid: 65c9f87612e81584fa555fff77dcad49, type: 3}
-  enemy5: {fileID: 6372380414257661357, guid: 144763e48065ad94fa5ae48e209d1db9, type: 3}
-  player: {fileID: 0}
-  enemy: {fileID: 0}
-  playerHealth: {fileID: 0}
-  enemyHealth: {fileID: 0}
-  attackBtn: {fileID: 0}
-  healBtn: {fileID: 0}
-  cursor: {fileID: 6160772003210096068, guid: a5c2534fa86b63b4aa137256404771a1, type: 3}
 --- !u!4 &746238566
 Transform:
   m_ObjectHideFlags: 0
@@ -1432,6 +1392,43 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &746238567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746238564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82f0e281d5456f746b74992285c900f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pl1: {fileID: 0}
+  pl2: {fileID: 0}
+  whoseTurn: 0
+  unit_loc:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  units:
+  - {fileID: 9021478225458737776, guid: 53d021c9bdc095b45a57656f26e3e5b6, type: 3}
+  - {fileID: 6846303839954130033, guid: 8be6bc59c27b4744ca99895302d13e17, type: 3}
+  - {fileID: 3845003491151555074, guid: b6f73436b20843a4f91838909ee4618f, type: 3}
+  - {fileID: 5070728416221771793, guid: 93d3f3a29f609b84bab156d03bb2b8b2, type: 3}
+  - {fileID: 5915696679057376893, guid: 387648c3ae0f7d84e8f1a44aeb2801ff, type: 3}
+  - {fileID: 8967632994862512123, guid: 81564b6a7d69e074484ed29bc8692cda, type: 3}
+  - {fileID: 4412805437377851607, guid: a5800ad3759dce547ba3c448ea8e3624, type: 3}
+  - {fileID: 3817009364968435626, guid: a671332f82d77144b884041117a6f0b5, type: 3}
+  - {fileID: 8576120826954363348, guid: 65c9f87612e81584fa555fff77dcad49, type: 3}
+  - {fileID: 6372380414257661357, guid: 144763e48065ad94fa5ae48e209d1db9, type: 3}
 --- !u!1 &893866743
 GameObject:
   m_ObjectHideFlags: 0

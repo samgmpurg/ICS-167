@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 4650399595786738154}
   - component: {fileID: 8531939418979779782}
   - component: {fileID: 1130393088444514656}
-  - component: {fileID: 8940975315946716958}
   m_Layer: 0
   m_Name: Ogre
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,20 +103,8 @@ MonoBehaviour:
   timesmoved: 0
   unitmousePos: {x: 0, y: 0, z: 0}
   unitappliedPosition: {x: 0, y: 0, z: 0}
-  SOunit: {fileID: 0}
+  SOunit: {fileID: 11400000, guid: be4924e67ec8d4a448667083eac46a0b, type: 2}
   unmoveable: 0
   sprite: {fileID: 0}
   posa: {x: 0, y: 0, z: 0}
   cursorOnObj: 0
---- !u!114 &8940975315946716958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3845003491151555074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e51bf4c76ef7a4388f26f65f5db5ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

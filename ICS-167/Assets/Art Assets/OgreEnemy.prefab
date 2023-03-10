@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4417103751423869799}
   m_Layer: 0
   m_Name: OgreEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,6 +124,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e51bf4c76ef7a4388f26f65f5db5ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mov: 1
-  atkRange: 1
-  redSquare: {fileID: 0}

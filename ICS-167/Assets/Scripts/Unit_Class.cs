@@ -23,6 +23,9 @@ public abstract class UnitInstance : MonoBehaviour
     public SOUnitDefinition SOunit;
     public bool unmoveable;
     public SpriteRenderer sprite;
+    [SerializeField]
+    public int HP { get; set; }
+    public Vector3 currentLoc { get; set; }
     //void Update()
     //{
 
@@ -90,6 +93,7 @@ public abstract class UnitInstance : MonoBehaviour
             timesmoved+=1;
             StartCoroutine(MovePlayer(Vector3.right));
         }
+
     }
     private void graycharacter(){
 
@@ -115,6 +119,8 @@ public abstract class UnitInstance : MonoBehaviour
         transform.position = targetPos;
 
         isMoving = false;
+        unmoveable = true;
+
     }
 }
     

@@ -4,6 +4,53 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField]
+    private bool isTurn { get; set; }
+    [SerializeField]
+    private bool isAI { get; set; }
+    [SerializeField]
+    public Character[] team { get; set; }
+
+    private Vector3 unit1Loc, unit2Loc, unit3Loc, unit4Loc, unit5Loc;
+
+
+
+    void Start()
+    {
+
+    }
+
+    void Update()
+    {
+        
+    }
+
+    public Player(bool isTurn, bool isAI, Vector3 unit1, Vector3 unit2, Vector3 unit3, Vector3 unit4, Vector3 unit5)
+    {
+        this.isTurn = isTurn;
+        this.isAI = isAI;
+        team[0] = gameObject.GetComponent<Human>();
+        team[1] = gameObject.GetComponent<Elf>();
+        team[2] = gameObject.GetComponent<Ogre>();
+        team[3] = gameObject.GetComponent<Beast>();
+        team[4] = gameObject.GetComponent<Fairy>();
+        team[0] = Human.Create(unit1, isTurn, isAI);
+        team[1] = Elf.Create(unit1, isTurn, isAI);
+        team[2] = Ogre.Create(unit1, isTurn, isAI);
+        team[3] = Beast.Create(unit1, isTurn, isAI);
+        team[4] = Fairy.Create(unit1, isTurn, isAI);
+    }
+
+
+    public static Player Create(bool isTurn, bool isAI, Vector3 loc1, Vector3 loc2, Vector3 loc3, Vector3 loc4, Vector3 loc5)
+    {
+        Player temp = new Player(isTurn, isAI, loc1, loc2, loc3, loc4, loc5);
+
+        return temp;
+    }
+}
+/*public class Player : MonoBehaviour
+{
     private bool isTurn { get; set; }
     private bool isAI { get; set; }
     private Character[] team { get; set; }
@@ -23,7 +70,7 @@ public class Player : MonoBehaviour
 
         return temp;
     }
-    */
+    
     void Start()
     {
         gameObj = new GameObject();
