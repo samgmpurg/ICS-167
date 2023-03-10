@@ -20,7 +20,7 @@ public class Beast : Character
     {
         if ((MAXHP - HP) < MAXHP / 2)
         {
-            Vector3 nearestEnemyLoc = findNearestEnemyPos(GameStateManager.characterList);
+            Vector3 nearestEnemyLoc = findNearestEnemyPos(GameStateManger.characterList);
             Vector3 newLoc = new Vector3(nearestEnemyLoc.x + MOV / 2, nearestEnemyLoc.y + MOV / 2);
         }
         else

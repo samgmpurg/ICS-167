@@ -9,7 +9,7 @@ public class GameStateManger : MonoBehaviour
 {
     private Player pl1Team;
     private Player pl2Team;
-
+    public static Character[] characterList;
     public GameObject[] units;
     private Vector3[] unit_loc;
     
@@ -91,11 +91,11 @@ public class GameStateManger : MonoBehaviour
         spot3 = new Vector3(10.0f, 5.0f, 1.0f);
         spot4 = new Vector3(11.0f, 5.0f, 1.0f);
         spot5 = new Vector3(12.0f, 5.0f, 1.0f);
-        spot6 = new Vector3(6.0f, 10.0f, 1.0f);
-        spot7 = new Vector3(10.0f, 14.0f, 1.0f);
-        spot8 = new Vector3(8.0f,12.0f, 1.0f);
-        spot9 = new Vector3(4.0f, 12.0f, 1.0f);
-        spot10 = new Vector3(3.0f, 11.0f, 1.0f);
+        spot6 = new Vector3(8.0f, 18.0f, 1.0f);
+        spot7 = new Vector3(7.0f, 18.0f, 1.0f);
+        spot8 = new Vector3(6.0f, 18.0f, 1.0f);
+        spot9 = new Vector3(5.0f, 18.0f, 1.0f);
+        spot10 = new Vector3(4.0f, 18.0f, 1.0f);
         
 
         if (_instance == null)
