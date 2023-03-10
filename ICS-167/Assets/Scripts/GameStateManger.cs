@@ -5,10 +5,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public enum State
+/*public enum State  //work in progress with the states
 {
     Start, PlayerTurn, EnemyTurn, Won, Lost
-}
+}*/
 
 public class GameStateManger : MonoBehaviour
 {
@@ -50,7 +50,7 @@ public class GameStateManger : MonoBehaviour
 
     //private State state;
 
-    public State state;
+    //public State state;
    
     void Start()
     {
@@ -66,7 +66,7 @@ public class GameStateManger : MonoBehaviour
         spot10 = new Vector3(4.0f, 12.0f, 1.0f);
         spot11 = new Vector3(3.0f, 11.0f, 1.0f);
 
-       state = State.Start;
+       //state = State.Start;
 
         if (_instance == null)
         {
