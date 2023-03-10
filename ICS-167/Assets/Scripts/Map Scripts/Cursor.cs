@@ -32,7 +32,7 @@ public class Cursor : MonoBehaviour
             for (int j = 0; j < width; j++)
             {
                 //Each tile is 40x40 pixels. Therefore the location of each tiles(pivot at bottom left corner) would increase by 40.
-                tileGrid[i, j] = new Tile(i * 40, j * 40, (i + 1) * 40, (j + 1) * 40);
+                tileGrid[i, j] = Tile.CreateTile(i * 40, j * 40, (i + 1) * 40, (j + 1) * 40);
             }
         }
     }
