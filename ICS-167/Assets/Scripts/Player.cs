@@ -4,6 +4,41 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    private bool isTurn { get; set; }
+    private bool isAI { get; set; }
+    private Character[] team { get; set; }
+    public static GameObject gameObj;
+    /*
+    public static Player Create(bool isTurn, bool isAI, Vector3 loc1, Vector3 loc2, Vector3 loc3, Vector3 loc4, Vector3 loc5)
+    {
+        Player temp = gameObj.AddComponent<Player>();
+        temp.isTurn = isTurn;
+        temp.isAI = isAI;
+        temp.team = new Character[5];
+        temp.team[0] = Human.Create(loc1);
+        temp.team[1] = Elf.Create(loc2);
+        temp.team[2] = Ogre.Create(loc3);
+        temp.team[3] = Beast.Create(loc4);
+        temp.team[4] = Fairy.Create(loc5);
+
+        return temp;
+    }
+    */
+    void Start()
+    {
+        gameObj = new GameObject();
+    }
+
+
+    void Update()
+    {
+
+    }
+    
+
+}
+
+/* previous code work. This comes from line 7.
     public int PlayerIndex{get; private set; }
 
     // public int teamnum; //players team 
@@ -85,4 +120,4 @@ public class Player : MonoBehaviour
     {
         
     }
-}
+    */

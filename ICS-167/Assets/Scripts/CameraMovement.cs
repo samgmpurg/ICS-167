@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     private static Vector3 cameraPosition;
-    public bool xEdgeMin, xEdgeMax, yEdgeMin, yEdgeMax;
+    public bool yEdgeMin, yEdgeMax;
 
     [Header("Camera Settings")]
     [SerializeField]
